@@ -1,6 +1,6 @@
 # Kotlin multiplatform logging library
-The library came out due to the extending projects to Kotlin Multiplatform
-The main principle is logging in the same way as in Android (android.util.Log)
+The library came out due to the extending projects to Kotlin Multiplatform.
+The main principle is logging in the same way as in Android (android.util.Log).
 
 ## Supported platforms
 * Android (supports android.util.Log)
@@ -77,7 +77,7 @@ class CustomLogger : Log.Logger {
 ```
 
 ### Log and ProGuard and R8
-Add bellow code to your ProGuard file to get rid of unwanted logs in release builds (if ProGuard or R8 is enabled)
+Add the following code to your ProGuard file to get rid of unwanted logs in the release builds (if ProGuard or R8 is enabled)
 ```
 -assumenosideeffects class amaterek.util.Log {
     public void v(...);
