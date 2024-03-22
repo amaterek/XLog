@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "X-Log"
+rootProject.name = "kmp-log"
 include(":log")

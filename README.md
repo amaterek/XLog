@@ -1,14 +1,15 @@
-[![Release](https://jitpack.io/v/amaterek/XLog.svg)](https://jitpack.io/#amaterek/XLog)
+[![Release](https://jitpack.io/v/amaterek/kmp-log.svg)](https://jitpack.io/#amaterek/kmp-log)
 
 # Kotlin multiplatform logging library
 The library came out due to the extending projects to Kotlin Multiplatform.
 The main principle is logging in the same way as in Android (android.util.Log).
+Kotlin version: 1.9.22
 
 ## Supported platforms
 * Android (supports android.util.Log)
 * JVM (supports java.util.logging.Logger)
 * iOS (supports only Kotlin's print. TODO: implemented according to iOS logging principles)
-* Js (supports only Kotlin's print. TODO: implemented according to WEB logging principles)
+* Js (supports only Kotlin's print. TODO: implemented according to WEB logging principles). WARNING JitPack doesn't build iOS targets.
 * wasmJs (supports only Kotlin's print. TODO: implemented according to WEB logging principles)
 
 ## Examples
@@ -26,7 +27,7 @@ Then add this to your dependencies
 
 ```gradle
 dependencies {
-    implementation 'com.github.amaterek:XLog:v0.2'
+    implementation 'com.github.amaterek.kmp-log:log:v0.4'
 }
 ```
 
