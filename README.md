@@ -1,3 +1,5 @@
+[![Release](https://jitpack.io/v/amaterek/XLog.svg)](https://jitpack.io/#amaterek/XLog)
+
 # Kotlin multiplatform logging library
 The library came out due to the extending projects to Kotlin Multiplatform.
 The main principle is logging in the same way as in Android (android.util.Log).
@@ -11,7 +13,21 @@ The main principle is logging in the same way as in Android (android.util.Log).
 
 ## Examples
 
-### Initialize the Logger and set logging level
+First add jitpack repository
+
+```gradle
+repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+}
+```
+
+Then add this to your dependencies
+
+```gradle
+dependencies {
+    implementation 'com.github.amaterek:XLog:v0.2'
+}
 ```
 
 ### Initialize the Logger and set logging level

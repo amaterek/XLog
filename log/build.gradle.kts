@@ -1,20 +1,14 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    id("maven-publish")
 }
 
 kotlin {
     jvm()
+    js { browser {} }
     @Suppress("OPT_IN_USAGE")
     wasmJs { browser {} }
-
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = libs.versions.jvmTarget.get()
-            }
-        }
-    }
 
     listOf(
         iosX64(),
@@ -27,6 +21,14 @@ kotlin {
         }
     }
 
+    androidTarget {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = libs.versions.jvmTarget.get()
+            }
+        }
+    }
+
     sourceSets {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -36,6 +38,10 @@ kotlin {
             implementation(libs.junit)
             implementation(libs.mockk)
         }
+    }
+
+    android {
+        publishLibraryVariants("release")
     }
 }
 
@@ -50,5 +56,19 @@ android {
     dependencies {
         testImplementation(libs.junit)
         testImplementation(libs.mockk)
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            publications {
+                register("release", MavenPublication::class) {
+                    groupId = "amaterek"
+                    artifactId = "util-log"
+                    version = "0.2"
+                }
+            }
+        }
     }
 }
