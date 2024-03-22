@@ -27,7 +27,7 @@ Then add this to your dependencies
 
 ```gradle
 dependencies {
-    implementation 'com.github.amaterek.kmp-log:log:v0.4'
+    implementation 'com.github.amaterek.kmp-log:log:{version}'
 }
 ```
 

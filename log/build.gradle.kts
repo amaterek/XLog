@@ -64,9 +64,9 @@ publishing {
         maven {
             publications {
                 register("release", MavenPublication::class) {
-                    groupId = "amaterek"
-                    artifactId = "util-log"
-                    version = "0.2"
+                    groupId = "com.github.amaterek"
+                    artifactId = "kmp-log"
+                    version = "0.4"
                 }
             }
         }
