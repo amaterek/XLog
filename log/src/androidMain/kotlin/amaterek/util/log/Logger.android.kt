@@ -33,4 +33,4 @@ private class AndroidLogger : amaterek.util.log.Log.Logger {
     }
 }
 
-internal actual fun getDefaultLogger(): amaterek.util.log.Log.Logger = AndroidLogger()
+actual fun getDefaultLogger(): amaterek.util.log.Log.Logger = AndroidLogger()

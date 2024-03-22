@@ -52,7 +52,7 @@ private class JvmLogger : Log.Logger {
     }
 }
 
-internal actual fun getDefaultLogger(): Log.Logger = JvmLogger()
+actual fun getDefaultLogger(): Log.Logger = JvmLogger()
 
 // For testing purpose - How to mock Logger.getAnonymousLogger()?
 internal fun getJavaLogger(): Logger = Logger.getAnonymousLogger()

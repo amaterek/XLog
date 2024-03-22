@@ -73,4 +73,4 @@ object Log {
     private var level: Level = Level.VERBOSE
 }
 
-internal expect fun getDefaultLogger(): Log.Logger
+expect fun getDefaultLogger(): Log.Logger
