@@ -1,6 +1,6 @@
 package amaterek.util.log
 
-class ConsoleLogger : Log.Logger {
+class PrintLogger : Log.Logger {
 
     override fun verbose(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) println("VERBOSE: $tag: $message\n$throwable") else println("VERBOSE: $tag: $message")

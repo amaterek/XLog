@@ -4,19 +4,19 @@ import io.mockk.*
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 
-class ConsoleLoggerTest() {
+class PrintLoggerTest() {
 
     private val testTag = "testTag"
     private val testMessage = "testMessage"
     private val testThrowable = Exception("testThrowable")
 
-    private lateinit var subject: ConsoleLogger
+    private lateinit var subject: PrintLogger
 
     private val kotlinIoHClass = System.out
 
     @BeforeTest
     fun setUp() {
-        subject = ConsoleLogger()
+        subject = PrintLogger()
     }
 
     @Test

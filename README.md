@@ -6,18 +6,22 @@ The main principle is logging in the same way as in Android (android.util.Log).
 * Android (supports android.util.Log)
 * JVM (supports java.util.logging.Logger)
 * iOS (supports only Kotlin's print. TODO: implemented according to iOS logging principles)
+* Js (supports only Kotlin's print. TODO: implemented according to WEB logging principles)
 * wasmJs (supports only Kotlin's print. TODO: implemented according to WEB logging principles)
 
 ## Examples
 
 ### Initialize the Logger and set logging level
 ```
+
+### Initialize the Logger and set logging level
+```kotlin
 Log.setLogger(getDefaultLogger())
 Log.setLevel(Logger.Level.DEBUG) // Optional, by default all levels are active
 ```
 
 ### Using the Log
-```
+```kotlin
 // Verbose logs
 Log.v("MyTag", "My message")
 Log.v("MyTag", "My message", throwable)
@@ -47,7 +51,7 @@ Log.wtf("MyTag", throwable) // additional use case to log only stack trace
 
 ### Custom loggers
 Custom logger can be implemented by extending Log.Logger. It may be useful to log exceptions or other valuable information to the cloud.
-```
+```kotlin
 class CustomLogger : Log.Logger {
 
     override fun verbose(tag: String, message: String, throwable: Throwable?) {
